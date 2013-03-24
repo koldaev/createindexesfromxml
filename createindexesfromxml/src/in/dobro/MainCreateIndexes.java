@@ -15,7 +15,7 @@ public class MainCreateIndexes extends SuperParser {
 
 
 	public static void main(String[] args) throws ParserConfigurationException, SAXException, IOException, XPathExpressionException {
-		new MainCreateIndexes("zh");
+		new MainCreateIndexes("th");
 	}
 
 }

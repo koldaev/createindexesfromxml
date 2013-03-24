@@ -12,6 +12,7 @@ import javax.xml.xpath.XPathExpression;
 import javax.xml.xpath.XPathExpressionException;
 import javax.xml.xpath.XPathFactory;
 
+import org.apache.lucene.analysis.ThaiAnalyzer;
 import org.apache.lucene.analysis.standard.StandardAnalyzer;
 import org.apache.lucene.index.IndexWriter;
 import org.apache.lucene.index.IndexWriterConfig;
@@ -44,7 +45,8 @@ public class SuperParser {
         dirindexes.mkdir();
         
         Directory index = FSDirectory.open(dirindexes); 
-        StandardAnalyzer analyzer = new StandardAnalyzer(Version.LUCENE_35);
+        ThaiAnalyzer  analyzer = new ThaiAnalyzer(Version.LUCENE_35);
+        //StandardAnalyzer analyzer = new StandardAnalyzer(Version.LUCENE_35);
 		
         //создаем индекс на диске
         IndexWriterConfig config = new IndexWriterConfig(Version.LUCENE_35, analyzer);
